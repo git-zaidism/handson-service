@@ -26,6 +26,7 @@ public class S3Service {
     @Autowired
     private AmazonS3 amazonS3Client;
 
+
     public String fetchUsersJsonData() {
         try (S3Object object = amazonS3Client.getObject(new GetObjectRequest(bucketName, objectKey));
              InputStream objectData = object.getObjectContent();
