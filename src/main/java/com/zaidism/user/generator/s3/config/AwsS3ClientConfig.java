@@ -1,4 +1,4 @@
-package com.zaidism.user.generator.s3;
+package com.zaidism.user.generator.s3.config;
 
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
