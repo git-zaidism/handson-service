@@ -28,6 +28,7 @@ public class S3Service {
 
 
     public String fetchUsersJsonData() {
+        log.info("/fetch-users API called");
         try (S3Object object = amazonS3Client.getObject(new GetObjectRequest(bucketName, objectKey));
              InputStream objectData = object.getObjectContent();
              BufferedReader reader = new BufferedReader(new InputStreamReader(objectData))) {

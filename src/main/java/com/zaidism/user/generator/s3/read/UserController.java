@@ -21,4 +21,9 @@ public class UserController {
     public ResponseEntity<String> generateAndFetchUsersFromS3() {
        return ResponseEntity.ok(s3Service.fetchUsersJsonData());
     }
+
+    @GetMapping("/ecs")
+    public ResponseEntity<String> dockerTestForEcs() {
+        return ResponseEntity.ok("Hello Docker for ECS!!");
+    }
 }
